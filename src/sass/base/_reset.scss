@@ -1,3 +1,5 @@
+@use '../abstract/mixins' as *;
+
 *,
 *::after,
 *::before {
@@ -82,6 +84,10 @@ ul {
     'header header header header'
     'main main main main'
     'footer footer footer footer';
+
+  @include media(600px) {
+    grid-template-rows: 72px 1fr 539px;
+  }
 }
 
 .row {

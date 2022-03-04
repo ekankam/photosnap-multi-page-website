@@ -7,7 +7,18 @@ $accent: linear-gradient(
   #bc7198 43.46%,
   #5a77ff 83.33%
 );
+$facebook-color: linear-gradient(225deg, #63afdb 0%, #6028f1 100%);
+$youtube-color: linear-gradient(45deg, #d3205a 0%, #ff5a5a 100%);
+$twitter-color: linear-gradient(225deg, #65ffeb 0%, #27718a 100%);
+$pinterest-color: linear-gradient(225deg, #f6c683 0%, #de3838 100%);
+$instagram-color: linear-gradient(
+  26.57deg,
+  #ffc593 0%,
+  #bc7198 43.29%,
+  #5a77ff 83.33%
+);
 
+// breakpoints
 $lg: 1020px;
 $md: 768px;
 $sm: 375px;

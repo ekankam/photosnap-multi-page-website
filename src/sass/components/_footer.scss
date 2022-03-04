@@ -1,5 +1,147 @@
 @use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
 
 #footer {
   grid-area: footer;
+  background-color: $black;
+  color: $white;
+  padding: 7rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @include media(840px) {
+    padding-inline: 3rem;
+  }
+
+  @include media(600px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .footer-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+
+    @include media(840px) {
+      justify-content: space-between;
+    }
+
+    @include media(600px) {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &__left {
+      .social-box {
+        margin-top: 8rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        @include media(600px) {
+          margin-top: 2rem;
+        }
+
+        .social-link {
+          width: 2rem;
+          height: 2rem;
+
+          .icon {
+            path {
+              fill: $white;
+            }
+          }
+
+          .icon-1:hover,
+          .icon-2:hover,
+          .icon-3:hover,
+          .icon-4:hover,
+          .icon-5:hover {
+            path {
+              fill: url(#a);
+            }
+          }
+        }
+      }
+    }
+    &__nav-items {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.9rem;
+
+      .nav-link {
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 2px;
+        color: $white;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $light-gray;
+        }
+      }
+
+      @include media(840px) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 4%;
+        flex-direction: row;
+      }
+
+      @include media(600px) {
+        flex-direction: column;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+      }
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .link-box {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 8rem;
+
+        @include media(600px) {
+          margin-bottom: 5rem;
+        }
+        .link {
+          font-size: 1.2rem;
+          font-weight: 700;
+          line-height: 16px;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: $white;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .arrow-right {
+          color: $white;
+        }
+      }
+
+      p {
+        color: $light-gray;
+        opacity: 0.5;
+      }
+    }
+  }
 }

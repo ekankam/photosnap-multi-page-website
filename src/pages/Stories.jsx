@@ -1,9 +1,15 @@
 import React from 'react'
-import { ArrowRight } from '../assets/features/desktop/index'
+import {
+  ArrowRight,
+  EmbedIcon,
+  NoLimitIcon,
+  ResponsiveIcon,
+} from '../assets/features/desktop/index'
 import topImg from '../assets/home/desktop/create-and-share.jpg'
 import middleRowImg from '../assets/home/desktop/beautiful-stories.jpg'
 import lastRowImg from '../assets/home/desktop/designed-for-everyone.jpg'
 import GalleryCard from '../components/GalleryCard'
+import Servicecard from '../components/Servicecard'
 
 const Stories = () => {
   return (
@@ -99,6 +105,24 @@ const Stories = () => {
           title="Architecturals"
           author="Samantha Brooke"
           text="Read story"
+        />
+      </div>
+
+      <div className="stories__services-grid-container">
+        <Servicecard
+          icon={<ResponsiveIcon />}
+          subTitle="100% Responsive"
+          text="No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen."
+        />
+        <Servicecard
+          icon={<NoLimitIcon />}
+          subTitle="No photo upload limit"
+          text="Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go."
+        />
+        <Servicecard
+          icon={<EmbedIcon />}
+          subTitle="Available to Embed"
+          text="Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. "
         />
       </div>
     </section>

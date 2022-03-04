@@ -8,13 +8,13 @@ const Header = ({ toggleMenu, setToggleMenu }) => {
     <header id="header">
       <nav className="navbar">
         {/* logo */}
-        <div className="navbar__logo-box">
+        <Link to="/" className="navbar__logo-box">
           <LogoDark />
-        </div>
+        </Link>
         {/* nav links */}
         <ul className="navbar__nav-items">
           <li className="nav-item">
-            <Link to="/" className="nav-link">
+            <Link to="/stories" className="nav-link">
               stories
             </Link>
           </li>
