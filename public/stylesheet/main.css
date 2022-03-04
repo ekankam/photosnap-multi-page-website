@@ -239,3 +239,225 @@ ul {
 #footer {
   grid-area: footer;
 }
+
+.stories {
+  width: 100%;
+}
+.stories__row-top, .stories__row-middle, .stories__row-last {
+  display: flex;
+  height: 100%;
+}
+@media (max-width: 690px) {
+  .stories__row-top, .stories__row-middle, .stories__row-last {
+    flex-direction: column;
+  }
+}
+.stories__row-top-left::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 304px;
+  background: linear-gradient(26.57deg, #ffc593 0.42%, #bc7198 43.46%, #5a77ff 83.33%);
+}
+@media (max-width: 690px) {
+  .stories__row-top-left::before {
+    top: 0;
+    left: 33px;
+    width: 128px;
+    height: 6px;
+  }
+}
+.stories__row-top-left, .stories__row-middle-left, .stories__row-last-left {
+  position: relative;
+  flex: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+@media (max-width: 980px) {
+  .stories__row-top-left, .stories__row-middle-left, .stories__row-last-left {
+    flex: 60%;
+    padding: 12rem 6rem;
+  }
+}
+@media (max-width: 690px) {
+  .stories__row-top-left, .stories__row-middle-left, .stories__row-last-left {
+    order: 2;
+    padding: 4rem 2rem;
+  }
+}
+.stories__row-top-left .content-wrapper, .stories__row-middle-left .content-wrapper, .stories__row-last-left .content-wrapper {
+  width: 72%;
+}
+@media (min-width: 1330px) {
+  .stories__row-top-left .content-wrapper, .stories__row-middle-left .content-wrapper, .stories__row-last-left .content-wrapper {
+    width: 60%;
+  }
+}
+@media (max-width: 980px) {
+  .stories__row-top-left .content-wrapper, .stories__row-middle-left .content-wrapper, .stories__row-last-left .content-wrapper {
+    width: 90%;
+  }
+}
+.stories__row-top-left .title, .stories__row-middle-left .title, .stories__row-last-left .title {
+  color: #fff;
+}
+@media (max-width: 690px) {
+  .stories__row-top-left .title, .stories__row-middle-left .title, .stories__row-last-left .title {
+    font-size: 3.2rem;
+  }
+}
+.stories__row-top-left .desc, .stories__row-middle-left .desc, .stories__row-last-left .desc {
+  margin-top: 2.1rem;
+  color: #dfdfdf;
+}
+.stories__row-top-left .link-box, .stories__row-middle-left .link-box, .stories__row-last-left .link-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 5.5rem;
+}
+.stories__row-top-left .link-box .link, .stories__row-middle-left .link-box .link, .stories__row-last-left .link-box .link {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.stories__row-top-left .link-box .link:hover, .stories__row-middle-left .link-box .link:hover, .stories__row-last-left .link-box .link:hover {
+  text-decoration: underline;
+}
+.stories__row-top-left .link-box .arrow-right, .stories__row-middle-left .link-box .arrow-right, .stories__row-last-left .link-box .arrow-right {
+  color: #fff;
+}
+.stories__row-top-right, .stories__row-middle-right, .stories__row-last-right {
+  flex: 55%;
+}
+@media (max-width: 980px) {
+  .stories__row-top-right, .stories__row-middle-right, .stories__row-last-right {
+    flex: 40%;
+  }
+}
+@media (max-width: 690px) {
+  .stories__row-top-right, .stories__row-middle-right, .stories__row-last-right {
+    order: 1;
+  }
+}
+.stories__row-top-right img, .stories__row-middle-right img, .stories__row-last-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.stories__row-middle-left {
+  order: 1;
+}
+@media (max-width: 690px) {
+  .stories__row-middle-left {
+    order: 2;
+  }
+}
+.stories__gallery-grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 768px) {
+  .stories__gallery-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 570px) {
+  .stories__gallery-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+.stories__gallery-grid-container .card {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 300ms ease-in-out;
+}
+.stories__gallery-grid-container .card:hover {
+  transform: translateY(-2rem);
+}
+.stories__gallery-grid-container .card:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(26.57deg, #ffc593 0.42%, #bc7198 43.46%, #5a77ff 83.33%);
+}
+.stories__gallery-grid-container .card__content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 4rem 4rem 4rem;
+  color: #fff;
+}
+.stories__gallery-grid-container .card__content h3 {
+  letter-spacing: 1px;
+}
+.stories__gallery-grid-container .card__author {
+  font-size: 1.3rem;
+  margin-bottom: 1.7rem;
+}
+.stories__gallery-grid-container .card__line {
+  display: block;
+  margin-top: 2.6rem;
+  margin-bottom: 2rem;
+  margin-inline: auto;
+  max-width: 300px;
+  width: 100%;
+  height: 1px;
+  background-color: #979797;
+}
+@media (max-width: 570px) {
+  .stories__gallery-grid-container .card__line {
+    max-width: 100%;
+  }
+}
+.stories__gallery-grid-container .card__more-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.stories__gallery-grid-container .card__more-info .text {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 16px;
+}
+.stories__gallery-grid-container .gallery-1 {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.27%, rgba(0, 0, 0, 0.661222) 100%), url(../../assets/stories/desktop/mountains.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.stories__gallery-grid-container .gallery-2 {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.27%, rgba(0, 0, 0, 0.661222) 100%), url(../../assets/stories/desktop/cityscapes.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.stories__gallery-grid-container .gallery-3 {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.27%, rgba(0, 0, 0, 0.661222) 100%), url(../../assets/stories/desktop/18-days-voyage.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.stories__gallery-grid-container .gallery-4 {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0.27%, rgba(0, 0, 0, 0.661222) 100%), url(../../assets/stories/desktop/architecturals.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
