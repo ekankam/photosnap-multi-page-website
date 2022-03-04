@@ -1,2 +1,13 @@
+// Variables & resets &mixins
 @use './abstract/variables';
+@use './abstract/mixins';
 @use './base/reset';
+
+// Components
+@use './components/header';
+@use './components/mobile-menu';
+@use './components/main';
+@use './components/footer';
+
+// Pages
+@use './pages/stories';
