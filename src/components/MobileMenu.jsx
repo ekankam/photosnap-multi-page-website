@@ -8,7 +8,7 @@ const MobileMenu = ({ toggleMenu, setToggleMenu }) => {
         <div className="navbar__inner-content">
           <ul className="navbar__nav-items">
             <li className="nav-item" onClick={(e) => setToggleMenu(false)}>
-              <Link to="/" className="nav-link">
+              <Link to="/stories" className="nav-link">
                 stories
               </Link>
             </li>

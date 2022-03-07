@@ -7,8 +7,11 @@ const Header = ({ toggleMenu, setToggleMenu }) => {
   return (
     <header id="header">
       <nav className="navbar">
-        {/* logo */}
-        <Link to="/" className="navbar__logo-box">
+        <Link
+          to="/"
+          onClick={(e) => setToggleMenu(false)}
+          className="navbar__logo-box"
+        >
           <LogoDark />
         </Link>
         {/* nav links */}
