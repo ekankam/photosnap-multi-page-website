@@ -9,8 +9,10 @@
 @use './components/main';
 @use './components/banner';
 @use './components/footer';
+@use './components/table';
 
 // Pages
 @use './pages/home';
 @use './pages/stories';
 @use './pages/features';
+@use './pages/pricing';

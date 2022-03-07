@@ -62,6 +62,18 @@
       background-size: cover;
     }
   }
+  &__pricing-hero {
+    background: url(../../assets/pricing/desktop/hero.jpg);
+    background-position: center;
+    background-size: cover;
+
+    @include media($md) {
+      background: url(../../assets/pricing/tablet/hero.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
 
   @include media(960px) {
     &__content-box {
@@ -91,12 +103,16 @@
       height: 400px;
     }
     &__feature-hero {
-      @include media($md) {
-        background: url(../../assets/features/mobile/hero.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-      }
+      background: url(../../assets/features/mobile/hero.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    &__pricing-hero {
+      background: url(../../assets/pricing/mobile/hero.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
   }
 }
