@@ -7,8 +7,10 @@
 @use './components/header';
 @use './components/mobile-menu';
 @use './components/main';
+@use './components/banner';
 @use './components/footer';
 
 // Pages
 @use './pages/home';
 @use './pages/stories';
+@use './pages/features';

@@ -241,6 +241,102 @@ ul {
   grid-area: main;
 }
 
+.banner {
+  width: 100%;
+  height: 490px;
+  display: flex;
+}
+.banner__content-box {
+  flex: 610px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 11rem;
+  background-color: #000;
+  position: relative;
+}
+.banner__content-box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 304px;
+  background: linear-gradient(26.57deg, #ffc593 0.42%, #bc7198 43.46%, #5a77ff 83.33%);
+}
+@media (max-width: 768px) {
+  .banner__content-box::before {
+    height: 144px;
+  }
+}
+@media (max-width: 570px) {
+  .banner__content-box::before {
+    top: 4px;
+    left: 33px;
+    width: 128px;
+    height: 6px;
+  }
+}
+.banner__content-box h1 {
+  margin-bottom: 2.1rem;
+  color: #fff;
+}
+.banner__content-box p {
+  color: #dfdfdf;
+}
+.banner__image-box {
+  flex: 830px;
+}
+.banner__feature-hero {
+  background: url(../../assets/features/desktop/hero.jpg);
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .banner__feature-hero {
+    background: url(../../assets/features/tablet/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+@media (max-width: 960px) {
+  .banner__content-box {
+    flex: 60%;
+    padding: 20rem 11.2rem;
+  }
+  .banner__image-box {
+    flex: 40%;
+  }
+}
+@media (max-width: 768px) {
+  .banner__content-box {
+    padding: 5.4rem;
+  }
+}
+@media (max-width: 570px) {
+  .banner {
+    flex-direction: column;
+    height: 600px;
+  }
+  .banner__content-box {
+    order: 2;
+    padding: 4.4rem;
+  }
+  .banner__image-box {
+    height: 400px;
+  }
+}
+@media (max-width: 570px) and (max-width: 768px) {
+  .banner__feature-hero {
+    background: url(../../assets/features/mobile/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
 #footer {
   grid-area: footer;
   background-color: #000;
@@ -897,4 +993,113 @@ ul {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.features__grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 12rem 16.5rem;
+  gap: 3rem;
+}
+@media (max-width: 768px) {
+  .features__grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8rem 6rem;
+  }
+}
+@media (max-width: 570px) {
+  .features__grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+.features__grid-container .service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.features__grid-container .service-card__icon-box {
+  width: 7.2rem;
+  height: 7.2rem;
+  margin-bottom: 4.8rem;
+}
+.features__grid-container .service-card__contents h3 {
+  margin-bottom: 3.1rem;
+  text-align: center;
+}
+.features__grid-container .service-card__contents p {
+  text-align: center;
+  font-size: 1.4rem;
+}
+@media (max-width: 768px) {
+  .features__grid-container .service-card__contents {
+    margin-bottom: 3rem;
+  }
+}
+.features__invite-container {
+  background: url(../../assets/shared/desktop/bg-beta.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 6.8rem 16.5rem;
+  color: #fff;
+}
+.features__invite-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(26.57deg, #ffc593 0.42%, #bc7198 43.46%, #5a77ff 83.33%);
+}
+@media (max-width: 690px) {
+  .features__invite-container::before {
+    top: 4px;
+    left: 24px;
+    width: 128px;
+    height: 6px;
+  }
+}
+@media (max-width: 960px) {
+  .features__invite-container {
+    padding: 3.4rem 8.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .features__invite-container {
+    padding: 2.4rem 4.2rem;
+  }
+}
+@media (max-width: 690px) {
+  .features__invite-container {
+    flex-direction: column;
+    padding: 6.8rem 1.5rem;
+  }
+  .features__invite-container h1 {
+    font-size: 3.2rem;
+  }
+}
+.features__invite-container .link-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 5.5rem;
+}
+.features__invite-container .link-box .link {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.features__invite-container .link-box .link:hover {
+  text-decoration: underline;
+}
+.features__invite-container .link-box .arrow-right {
+  color: #fff;
 }
