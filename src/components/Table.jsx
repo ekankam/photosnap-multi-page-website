@@ -2,9 +2,6 @@ import React from 'react'
 import { ReactComponent as CheckIcon } from '../assets/pricing/desktop/check.svg'
 
 const Table = () => {
-  const mediaQuery = window.matchMedia('(max-width: 690px)')
-
-  const res = mediaQuery.matches && 4
   return (
     <div className="compare">
       <h1>compare</h1>

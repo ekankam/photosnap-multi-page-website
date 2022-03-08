@@ -10,6 +10,10 @@
   padding-top: 16rem;
   margin-bottom: 6rem;
 
+  @include media(570px) {
+    display: none;
+  }
+
   h1 {
     margin-bottom: 5.6rem;
   }

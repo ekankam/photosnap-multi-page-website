@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ArrowRight } from '../assets/features/desktop'
 import Banner from '../components/Banner'
+import MobileTable from '../components/MobileTable'
 import PriceCard from '../components/PriceCard'
 import Table from '../components/Table'
 
@@ -51,6 +52,7 @@ const Pricing = () => {
         </div>
 
         <Table />
+        <MobileTable />
 
         <div className="features__invite-container">
           <h1>
