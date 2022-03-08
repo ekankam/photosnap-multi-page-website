@@ -672,6 +672,16 @@ ul {
 .home__row-top-left .link-box .arrow-right, .home__row-middle-left .link-box .arrow-right, .home__row-last-left .link-box .arrow-right {
   color: #fff;
 }
+.home__row-middle-left, .home__row-last-left {
+  background-color: #fff;
+}
+.home__row-middle-left .content-wrapper h1, .home__row-last-left .content-wrapper h1 {
+  color: #000;
+}
+.home__row-middle-left .content-wrapper p, .home__row-last-left .content-wrapper p {
+  color: #000;
+  opacity: 0.6;
+}
 .home__row-top-right, .home__row-middle-right, .home__row-last-right {
   flex: 55%;
 }
